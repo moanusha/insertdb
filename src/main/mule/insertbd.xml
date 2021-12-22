@@ -17,7 +17,7 @@ http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/sc
 	<secure-properties:config name="Secure_Properties_Config" doc:name="Secure Properties Config" doc:id="565e52b0-ed34-4e38-9613-a038d59ba482" file="properties\dev.yaml" key="mulesoft@1234567" />
 	<flow name="insertbdFlow" doc:id="18852012-1102-4835-b133-1fd405024272" >
 		<http:listener doc:name="Listener" doc:id="9e9c37ef-853d-411b-9d2d-5c610d61b2f2" config-ref="HTTP_Listener_config" path="/insertbd"/>
-		<logger level="INFO" doc:name="Logger" doc:id="9894035e-e83c-4d44-94f8-5ada47889c13" message="starting flow name -- #[flow.name]----inserted successfully- #[payload]"/>
+		<logger level="INFO" doc:name="Logger" doc:id="9894035e-e83c-4d44-94f8-5ada47889c13" message="starting flow name -- #[flow.name]----inserted successfully- #[payload]--hi"/>
 		<db:insert doc:name="Insert" doc:id="c5e7a704-0b23-4643-8b07-290ea7afae1e" config-ref="Database_Config">
 			<db:sql ><![CDATA[insert into production.categories (category_name) values (:value)]]></db:sql>
 			<db:input-parameters ><![CDATA[#[{
